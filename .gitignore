@@ -10,7 +10,9 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
-/.idea
+/.idea/*
+
+/Gemfile.lock
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
