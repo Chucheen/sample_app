@@ -1,10 +1,7 @@
-<head>
-  <title>Ruby on Rails Tutorial Sample App | Help</title>
-</head>
+<% provide(:title, 'Help') %>
 <h1>Help</h1>
 <p>
-  Get help on the Ruby on Rails Tutorial at the
-  <a href="http://railstutorial.org/help">Rails Tutorial help page</a>.
-  To get help on this sample app, see the
-  <a href="http://railstutorial.org/book">Rails Tutorial book</a>.
+  This is the home page for the <%= yield(:title) %> a
+  <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+  sample application.
 </p>
