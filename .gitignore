@@ -18,4 +18,5 @@
 /log/*.log
 /tmp
 /bin
+/bundler_stubs
 *~
