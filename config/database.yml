@@ -16,7 +16,7 @@ test:
 development:
   adapter: postgresql
   encoding: unicode
-  database: tests
+  database: sample_dev
   pool: 5
   username: postgres
   password: devtest
