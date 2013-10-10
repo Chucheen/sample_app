@@ -33,6 +33,7 @@ gem 'jquery-rails', '2.0.1'
 #  gem 'libnotify', '0.5.9'
 #  gem 'guard-spork', '0.3.2'
 #  gem 'spork', '0.9.0'
+#  gem 'factory_girl_rails', '1.4.0'
 #end
 
 group :production do
@@ -49,4 +50,5 @@ group :test do
   #gem 'win32console', '1.3.0'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
+  gem 'factory_girl_rails', '1.4.0'
 end

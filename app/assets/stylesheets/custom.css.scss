@@ -1,7 +1,6 @@
 @import "bootstrap";
 
 /* mixins, variables, etc. */
-
 $lightGray: #999;
 $grayMediumLight: #eaeaea;
 
@@ -113,15 +112,13 @@ footer {
 }
 
 /* miscellaneous */
-
-.debug dump {
+.debug_dump {
   clear: both;
   float: left;
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
 }
-
 
 
 //html {
