@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:succes] = "¡Bienvenido #{@user.name.upcase}!"
+      flash[:succes] = "Welcome"
       redirect_to @user
     else
       #flash[:error] = "No se puede agregar el usuario #{@user.email}.<BR>Verifique los siguientes errores"
