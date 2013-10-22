@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    @hello = "JGutierrez"
+
   end
 
   def create
