@@ -22,6 +22,7 @@ describe User do
   it{ should respond_to(:password)}
   it{ should respond_to(:password_confirmation)}
   it{ should respond_to(:authenticate)}
+  it{ should respond_to(:remember_token) }
 
   #pending "add some examples to (or delete) #{__FILE__}"
   it {should be_valid }
@@ -104,6 +105,14 @@ describe User do
   describe "When password or confirmation is too short" do
     before {@user.password = @user.password_confirmation = "a"*5}
     it {should_not be_valid}
+  end
+
+  describe "remember token" do
+    before do
+      @user.save
+    end
+
+    its(:remember_token){should_not be_blank}
   end
 
 end

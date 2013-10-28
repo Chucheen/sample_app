@@ -10,9 +10,9 @@ class SessionsController < ApplicationController
 
     if(user)
       if(user.authenticate(sessionHash[:password]))
-        flash.now[:success] = "Welcome back #{user.name}<#{user.email}>"
+        flash[:success] = "Welcome back #{user.name}<#{user.email}>"
         sign_in user
-        render 'new'
+        redirect_to user
       else
         flash.now[:error] = "Incorrect login: Bad password"
         render 'new'
