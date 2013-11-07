@@ -14,3 +14,9 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function(){
+    $("#container").click(function(){
+        $("#signup").slideToggle();
+    });
+});
