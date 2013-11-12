@@ -24,6 +24,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    signout
+    redirect_to signin_path
   end
 
 end
