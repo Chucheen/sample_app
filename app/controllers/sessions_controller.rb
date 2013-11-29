@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    sessionHash = params[:session];
+
+    sessionHash = params[:session]
     user = User.find_by_email sessionHash[:email]
 
     if(user)
@@ -18,9 +19,10 @@ class SessionsController < ApplicationController
         render 'new'
       end
     else
-      flash.now[:error] = "Incorrect login: User doesn't exist"
+      flash.now[:error] = "Incorrect login: User #{sessionHash[:email]} Doesn't exist"
       render 'new'
     end
+
   end
 
   def destroy

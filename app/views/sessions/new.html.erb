@@ -6,26 +6,26 @@
 
     <%= "El usuario #{@userName} no existe el password es incorrecto" if !@userName.nil?  %>
 
-    <%= form_tag(new_session_path) do %>
+    <%= form_tag(sessions_path) do %>
         <%= label_tag :email %>
-        <%= email_field_tag :email, params[:email] %>
+        <%= email_field_tag "session[email]" %>
 
         <%= label_tag :password %>
-        <%= password_field_tag :password, params[:password]%>
+        <%= password_field_tag "session[password]" %>
 
         <%= submit_tag 'Sign in', class: 'btn btn-large btn-primary' %>
         <p>New user ? <%= link_to 'Sign up now', signup_path %></p>
     <% end %>
 
-    <%= form_for(:session, url:sessions_path) do |f| %>
-        <%= f.label :email %>
-        <%= f.text_field :email %>
+    <!--<%= form_for(:session, url:sessions_path) do |f| %>-->
+        <!--<%= f.label :email %>-->
+        <!--<%= f.text_field :email %>-->
 
-        <%= f.label :password %>
-        <%= f.password_field :password %>
+        <!--<%= f.label :password %>-->
+        <!--<%= f.password_field :password %>-->
 
-        <%= f.submit 'Sign in', class: 'btn btn-large btn-primary' %>
-        <p>New user ? <%= link_to 'Sign up now', signup_path %></p>
-    <% end %>
+        <!--<%= f.submit 'Sign in', class: 'btn btn-large btn-primary' %>-->
+        <!--<p>New user ? <%= link_to 'Sign up now', signup_path %></p>-->
+    <!--<% end %>-->
   </div>
 </div>
