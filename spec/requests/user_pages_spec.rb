@@ -60,7 +60,10 @@ describe "User Pages" do
 
   describe 'edit' do
     let(:user){FactoryGirl.create(:user)}
-    before {visit edit_user_path(user)}
+    before do
+      sign_in user
+      visit edit_user_path(user)
+    end
 
     describe 'pages' do
       it { should have_selector('h1', text:'Update your profile') }
@@ -75,7 +78,7 @@ describe "User Pages" do
 
     describe 'with valid information' do
       let(:new_name) {'New Name'}
-      let(:new_email) {'New@email.com'}
+      let(:new_email) {'new@emaile.com'}
 
       before do
         fill_in "Name",             with: new_name
