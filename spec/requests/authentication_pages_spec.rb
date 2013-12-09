@@ -46,6 +46,7 @@ describe "Ahthentication" do
 
     describe "for non-signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
+
       describe "when attempting to visit a protected page" do
         before do
           visit edit_user_path(user)
@@ -76,7 +77,14 @@ describe "Ahthentication" do
           before { put user_path(user) }
           specify { response.should redirect_to(signin_path) }
         end
+
+        describe "visiting the user's index"  do
+          before {visit users_path}
+          it{ should have_selector('h1', text: "Sign In")}
+        end
+
       end
+
     end
 
     describe "as wrong user" do

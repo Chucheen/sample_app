@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 
-  before_filter :signed_in_user, only: [:edit, :update]
+  before_filter :signed_in_user, only: [:index, :edit, :update]
   before_filter :correct_user, only: [:edit, :update]
+
+  def index
+
+  end
 
   def show
     @user = User.find(params[:id])
@@ -39,7 +43,11 @@ class UsersController < ApplicationController
 
   private
     def signed_in_user
-      redirect_to signin_path, notice: 'You have to sign-in first' unless signed_in?
+      unless signed_in?
+        store_location
+        redirect_to signin_path, notice: 'You have to sign-in first' unless signed_in?
+      end
+
     end
 
     def correct_user
