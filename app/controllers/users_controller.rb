@@ -4,7 +4,12 @@ class UsersController < ApplicationController
   before_filter :correct_user, only: [:edit, :update]
 
   def index
+    @users =  User.all
+  end
 
+  def download
+    pdf_filename = File.join(Rails.root, "app/assets/others/cuenta.pdf")
+    send_file(pdf_filename, :filename => "your_document.pdf", :type => "application/pdf", disposition: 'inline')
   end
 
   def show

@@ -12,6 +12,8 @@ SampleApp::Application.routes.draw do
 
   root to: 'static_pages#home'
 
+  match 'download_link', to: 'users#download'
+
   match 'root', to: 'static_pages#home'
 
   match 'help', to: 'static_pages#help'
@@ -21,6 +23,8 @@ SampleApp::Application.routes.draw do
   match 'contact', to: "static_pages#contact"
 
   match 'signup', to:"users#new"
+
+  match 'users_index', to:"users#index"
 
   match 'signin', to: 'sessions#new'
 

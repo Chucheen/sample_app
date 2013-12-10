@@ -27,8 +27,7 @@ describe "Ahthentication" do
         fill_in "session_password", with: user.password
         click_button 'Sign in'
       }
-
-      #it {should have_selector 'h1', text: 'Sign in'}
+      it {should have_link('Users', href: users_index_path)}
       it {should have_link('Profile', href: user_path(user))}
       it {should have_link('Sign out', href:signout_path)}
       it {should have_link('Settings', href:edit_user_path(user))}
@@ -79,8 +78,8 @@ describe "Ahthentication" do
         end
 
         describe "visiting the user's index"  do
-          before {visit users_path}
-          it{ should have_selector('h1', text: "Sign In")}
+          before {visit users_index_path}
+          it{ should have_selector('h1', text: "Sign in")}
         end
 
       end
@@ -99,7 +98,7 @@ describe "Ahthentication" do
 
       describe "Submitting PUT request to Users#Edit " do
         before {put user_path(wrongUser)}
-        debugger
+        #debugger
 
         specify {response.should redirect_to(root_path)}
       end

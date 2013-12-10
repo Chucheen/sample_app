@@ -8,6 +8,7 @@ gem 'bootstrap-sass', '2.0.0'
 #gem 'bcrypt-ruby', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 #gem 'bcrypt-ruby', git: 'git@github.com:hananamar/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'faker'
 
 group :development do
   gem 'sqlite3', '1.3.8'
