@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.0.0'
-#gem 'bcrypt-ruby', '3.0.1'
+gem 'bcrypt-ruby', '3.0.1'
 #gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 #gem 'bcrypt-ruby', '3.1.0', :require => 'bcrypt'
 #gem 'bcrypt-ruby', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 #gem 'bcrypt-ruby', git: 'git@github.com:hananamar/bcrypt-ruby.git', :require => 'bcrypt'
-gem 'bcrypt-ruby', :require => 'bcrypt'
+#gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'faker'
 
 group :development do
