@@ -1,0 +1,2 @@
+Genera una migración (modificación) para la base de datos 
+rails generate migration add admin to users admin:boolean
