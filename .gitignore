@@ -20,3 +20,4 @@
 /bin
 /bundler_stubs
 *~
+*.orig
