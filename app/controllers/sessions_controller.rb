@@ -1,7 +1,10 @@
 class SessionsController < ApplicationController
 
   def new
-    #@userName = params[:session][:email];;
+    if(signed_in?)
+      flash[:success] = 'You are already signed in. Are you on drugs? :p'
+      render 'static_pages/home'
+    end
   end
 
   def create

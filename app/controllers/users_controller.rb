@@ -18,12 +18,17 @@ class UsersController < ApplicationController
   end
 
   def new
+    if(signed_in?)
+      flash.now[:success] = "You are already signed in.<br>Are you on drugs? :p".html_safe
+      render 'static_pages/home'
+    end
     @user = User.new
   end
 
   def create
     @user = User.new(params[:user])
     if @user.save
+      sign_in @user
       flash[:success] = "Welcome"
       redirect_to @user
     else
