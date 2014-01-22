@@ -25,6 +25,7 @@ describe User do
   it{ should respond_to(:remember_token) }
   it{ should respond_to(:admin) }
   it{ should respond_to(:authenticate) }
+  it{ should respond_to(:microposts) }
 
   #pending "add some examples to (or delete) #{__FILE__}"
   it {should be_valid }
