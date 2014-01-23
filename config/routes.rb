@@ -4,6 +4,8 @@ SampleApp::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :microposts, only: [:create, :destroy]
+
   get "users/new"
 
   # You can have the root of your site routed with "root"

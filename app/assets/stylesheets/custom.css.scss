@@ -110,6 +110,15 @@ footer {
   }
 }
 
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+
 /* sidebar */
 aside {
   section {
@@ -131,11 +140,20 @@ aside {
       margin-bottom: 3px;
     }
   }
+
+  textarea{
+    height: 100px;
+    margin-bottom: 5px;
+  }
 }
 
 .gravatar {
   float: left;
   margin-right: 10px;
+}
+
+.timestamp{
+  color: $grayLight;
 }
 
 /* miscellaneous */

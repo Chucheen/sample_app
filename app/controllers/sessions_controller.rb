@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def new
     if(signed_in?)
       flash[:success] = 'You are already signed in. Are you on drugs? :p'
-      render 'static_pages/home'
+      redirect_to root_path
     end
   end
 

@@ -11,19 +11,11 @@
   <div class="span8">
     <% if @user.microposts.any? %>
         <h3>Microposts <%= @user.microposts.count %></h3>
-        <ol>
-          <%= render @user.microposts %>
+        <ol class="microposts">
+          <%= render @microposts %>
         </ol>
-        <%= will_paginate @user.microposts %>
+        <%= will_paginate @microposts %>
     <% end %>
   </div>
 </div>
-
-
-<!--<% provide :title, @user.name %>-->
-<!--<h1>-->
-  <!--<%= gravatar_for @user %>-->
-  <!--<%= @user.name %>-->
-  <!--<%= gravatar_url @user %>-->
-<!--</h1>-->
-<!--<%=  @user.name %>, <%=  @user.email %>-->
+>
