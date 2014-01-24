@@ -12,7 +12,7 @@ describe 'Microposts Pages' do
 
     describe "with invalid information" do
 
-      describe "it should not create a micropost" do
+      it "should not create a micropost" do
         expect{click_button "Post"}.should_not change(:Micropost, :count)
       end
 
