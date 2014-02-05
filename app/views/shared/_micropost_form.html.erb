@@ -1,8 +1,8 @@
 <%= form_for(@micropost) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
     <div class="field">
-        <%= f.text_area :content, placeholder: 'Compose new micropost...', {id:} %>
-        <%= f.label 'char_labels', '140 Characters available', {id:'#char_labels', style: "text-align:right"} %>
+        <%= f.text_area :content, placeholder: 'Compose new micropost...', id: 'micropost-content' %>
+        <%= f.label 'char_labels', '140 Characters available', id:'micropost-characters', style: "text-align:right" %>
     </div>
     <%= f.submit "Post", class: 'btn btn-large btn-primary' %>
 <% end %>
