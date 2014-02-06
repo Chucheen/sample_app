@@ -1,5 +1,6 @@
 namespace :db do
   desc 'Fill database with sample data'
+
   task populate_users: :environment do
 
     99.times do |n|
@@ -23,5 +24,18 @@ namespace :db do
       end
     end
 
+  end
+
+  task populate_followers: :environment do
+    users = User.all
+    user = User.first
+    followers = users[4..20]
+    followed = users[0..40]
+    followers.each { |follower|
+      follower.follow! user unless follower.following? user
+    }
+    followed.each {|followed|
+      user.follow! followed unless user.following? followed
+    }
   end
 end

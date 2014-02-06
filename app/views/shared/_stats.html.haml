@@ -1,0 +1,10 @@
+- @user ||= current_user
+.stats
+  %a{ href:following_user_path(@user) }
+    %strong.stat{id:'followers'}
+      =@user.followed_users.count
+      following
+  %a{href:followers_user_path(@user)}
+    %strong.stat{id:'followers'}
+      =@user.followers.count
+      following

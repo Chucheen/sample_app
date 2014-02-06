@@ -1,10 +1,28 @@
 SampleApp::Application.routes.draw do
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+#  The other possibility, collection, works
+#  without the id, so that would respond to the URI /users/tigers (presumably to display all the tigers in our
+#  application). For more details on such routing options, see the Rails Guides article
+#  entitled "Rails Routing from the Outside In."
+=begin
+  resources :users do
+    collection do
+      get :tigers
+    end
+  end
+=end
 
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :microposts, only: [:create, :destroy]
+
+  resources :relationships, only: [:create, :destroy]
 
   get "users/new"
 
