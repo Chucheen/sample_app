@@ -13,6 +13,7 @@ gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'haml',      '3.1.8'
+gem 'debugger'
 
 group :development do
   gem 'sqlite3', '1.3.8'
@@ -41,7 +42,6 @@ group :test do
   gem 'factory_girl_rails', '1.4.0'
   gem 'cucumber-rails', '1.2.1', require: false
   gem 'database_cleaner', '0.7.0'
-  gem 'debugger'
 end
 
 group :production do
